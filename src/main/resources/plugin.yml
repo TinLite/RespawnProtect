@@ -1,0 +1,17 @@
+name: RespawnProtect
+version: ${project.version}
+main: vn.vinhgaming.respawnprotect.RespawnProtect
+prefix: RespawnProtect
+authors: [ VinhGaming ]
+commands:
+  respawnprotect:
+    description: Main command
+    permission: rp.admin
+    aliases:
+      - rp
+      - rprotect
+permissions:
+  rp.admin:
+    default: op
+  rp.bypass:
+    default: op

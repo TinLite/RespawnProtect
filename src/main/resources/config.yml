@@ -1,0 +1,10 @@
+ProtectionTime: 200 # Thời gian bảo vệ sau khi hồi sinh (Tính bằng Tick, 1 giây = 20 tick)
+
+Message:
+  NoPermission: "&cBạn không có quyền dùng lệnh này."
+  UnableToCauseDamage: "&cNgười chơi vừa hồi sinh và vẫn còn được bảo vệ."
+  PlayerReceiveProtection: "&eBạn được miễn sát thương trong vòng 10 giây kế tiếp."
+  PlayerLostProtection: "&eThời gian miễn sát thương của bạn đã kết thúc."
+
+# Đừng đụng vào cái này. Tin tôi đi, bạn không muốn sửa cái này đâu.
+Config-Version: 1
