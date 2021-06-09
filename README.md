@@ -7,8 +7,10 @@ Minecraft mới nhất. Chắc thế.
 
 ### Permission
 
-|Permission|Description|Default| |--|--|--| |`rp.admin`|Cho phép sử dụng `/rp` để reload config|op| |`rp.bypass`|Cho
-phép gây sát thương lên cả người chơi đang được bảo vệ|op|
+|Permission|Description|Default|  
+|--|--|--|  
+|`rp.admin`|Cho phép sử dụng `/rp` để reload config|op|  
+|`rp.bypass`|Cho phép gây sát thương lên cả người chơi đang được bảo vệ|op|  
 
 ### Lưu ý
 
