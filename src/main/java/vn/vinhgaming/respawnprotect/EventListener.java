@@ -18,7 +18,15 @@ public class EventListener implements Listener {
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
         if (!(event.getEntity() instanceof Player)) return;
-        if ((event.getDamager() instanceof Player) && event.getDamager().hasPermission("rp.byass")) return;
+        if ((event.getDamager() instanceof Player)) {
+            if (event.getDamager().hasPermission("rp.byass")) return;
+            if (ConfigHandler.removeProtectionOnAttack && (DataHandler.isProtect((Player) event.getDamager()))) {
+                Player player = (Player) event.getDamager();
+                DataHandler.removeProtect(player);
+                player.sendMessage(ConfigHandler.getMessage("PlayerLostProtectionOnAttack"));
+                return;
+            }
+        }
         if (!(DataHandler.isProtect((((Player) event.getEntity()).getPlayer())))) return;
         event.setCancelled(true);
         if (event.getDamager() instanceof Player)

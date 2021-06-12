@@ -34,9 +34,16 @@ public class DataHandler {
     public static void addProtect(Player player) {
         protecting.add(player);
         player.sendMessage(ConfigHandler.getMessage("PlayerReceiveProtection"));
+        ConfigHandler.sendTitle(player);
         Bukkit.getScheduler().scheduleSyncDelayedTask(RespawnProtect.main, () -> {
-            protecting.remove(player);
+            if (!protecting.contains(player)) return;
+            removeProtect(player);
             player.sendMessage(ConfigHandler.getMessage("PlayerLostProtection"));
         }, ConfigHandler.protectionTime);
+    }
+
+    public static void removeProtect(Player player) {
+        protecting.remove(player);
+        player.sendTitle(" ", " ", 0, 5, 0); // clear title
     }
 }
